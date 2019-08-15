@@ -1,51 +1,45 @@
-Workarea Classic Search Autocomplete
-================================================================================
+# Workarea Classic Search Autocomplete
 
-Classic Search Autocomplete plugin for the Workarea platform.
+A Workarea Commerce plugin providing a simple Search Autocomplete UI
 
-Getting Started
---------------------------------------------------------------------------------
+This feature has been pluginized directly from Workarea v3.4 and subsequently removed in Workarea v3.5. 
 
-This gem contains a rails engine that must be mounted onto a host Rails application.
+If you are __upgrading from Workarea v3.4 to Workarea v3.5__ it is likely you'll want to install this plugin to ensure the expedience and consistency of your upgrade. 
 
-To access Workarea gems and source code, you must be an employee or a licensed retailer or partner.
+It should be noted that [workarea-commerce/workarea-search-autocomplete](https://github.com/workarea-commerce/workarea-search-autocomplete) exists and provides a better UX and UI for customers.
 
-Workarea gems are hosted privately at https://gems.weblinc.com/.
-You must have individual or team credentials to install gems from this server. Add your gems server credentials to Bundler:
+# Overview
 
-    bundle config gems.weblinc.com my_username:my_password
+* Find-as-you-type functionality
+* Produces a list of products, containing small thumbnail & name
 
-Or set the appropriate environment variable in a shell startup file:
+# Getting Started
 
-    export BUNDLE_GEMS__WEBLINC__COM='my_username:my_password'
+Add the gem to your application's Gemfile:
 
-Then add the gem to your application's Gemfile specifying the source:
-
-    # ...
-    gem 'workarea-classic_search_autocomplete', source: 'https://gems.weblinc.com'
-    # ...
-
-Or use a source block:
-
-    # ...
-    source 'https://gems.weblinc.com' do
-      gem 'workarea-classic_search_autocomplete'
-    end
-    # ...
+```ruby
+# ...
+gem 'workarea-classic_search_autocomplete'
+# ...
+```
 
 Update your application's bundle.
 
-    cd path/to/application
-    bundle
+```bash
+cd path/to/application
+bundle
+```
 
-Workarea Platform Documentation
---------------------------------------------------------------------------------
+# Features
+
+## jQuery UI Autocomplete
+
+This plugin utilizes the jQuery UI Autocomplete widget to keyboard and ARIA accessibility best practices. 
+
+# Workarea Platform Documentation
 
 See [http://developer.workarea.com](http://developer.workarea.com) for Workarea platform documentation.
 
-Copyright & Licensing
---------------------------------------------------------------------------------
+# License
 
-Copyright Workarea 2019. All rights reserved.
-
-For licensing, contact sales@workarea.com.
+Workarea Classic Search Autocomplete is released under the [Business Software License](LICENSE)
