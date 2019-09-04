@@ -9,14 +9,17 @@ Gem::Specification.new do |spec|
   spec.version     = Workarea::ClassicSearchAutocomplete::VERSION
   spec.authors     = ["Curt Howard"]
   spec.email       = ["choward@workarea.com"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of ClassicSearchAutocomplete."
-  spec.description = "TODO: Description of ClassicSearchAutocomplete."
+  spec.homepage    = 'https://github.com/workarea-commerce/workarea-classic_search_autocomplete'
+  spec.summary     = "Basic Autocomplete results displayed while searching"
+  spec.description = <<~DESCRIPTION
+    This plugin displays live results as the user begins to type a search into
+    the Storefront search field in a small UI displayed below the field. It
+    leverages a customized version of the jQuery UI Autocomplete functionality.
+    For a better overall UX and UI for your customers, consider the
+    workarea-search_autocomplete plugin instead.
+  DESCRIPTION
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = 'https://gems.weblinc.com'
-  end
+  spec.files = `git ls-files`.split("\n")
 
-  spec.files = `git ls-files`.split("\n")  end
+  spec.add_dependency 'workarea', '~> 3.x', '>= 3.5.x'
+end

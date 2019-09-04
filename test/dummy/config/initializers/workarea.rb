@@ -1,5 +1,5 @@
 Workarea.configure do |config|
   # Basic site info
-  config.site_name = 'Workarea Classic Search Autocomplete'
+  config.site_name = 'Workarea SACLASSIC'
   config.host = 'www.example.com'
 end

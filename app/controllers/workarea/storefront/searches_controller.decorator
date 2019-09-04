@@ -1,0 +1,14 @@
+module Workarea
+  decorate Storefront::SearchesController, with: :classic_search_autocomplete do
+    def index
+      render nothing: true and return if search_query.blank?
+      autocomplete_params = params.permit(:q)
+
+      search = Search::SearchSuggestions.new(autocomplete_params)
+
+      @results = search.results.map do |result|
+        Storefront::SearchSuggestionViewModel.new(result).to_h
+      end
+    end
+  end
+end
