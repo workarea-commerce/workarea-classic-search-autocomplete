@@ -26,7 +26,7 @@ module Workarea
 
         products.each { |p| Search::Storefront::Product.new(p).save }
         visit storefront.root_path
-        disable_analytics_events
+        disable_analytics_dom_events
 
         page.evaluate_script('$("#storefront_search").categorizedAutocomplete("search", "test");')
 
