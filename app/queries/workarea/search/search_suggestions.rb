@@ -2,7 +2,7 @@ module Workarea
   module Search
     class SearchSuggestions
       include Query
-      include ReleaseDisplayRules
+      include ProductDisplayRules
 
       document Search::Storefront
 
@@ -26,8 +26,8 @@ module Workarea
                   }
                 }
               },
-              active_for_release_clause,
-              include_current_release_clause
+              active_for_segments_clause,
+              preview_current_release_clause
             ]
           }
         }
