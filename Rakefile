@@ -43,6 +43,7 @@ task :release do
   system 'git push --tags'
 
   system "gem build workarea-classic_search_autocomplete.gemspec"
+  system "gem push workarea-classic_search_autocomplete-#{Workarea::ClassicSearchAutocomplete::VERSION}.gem"
   system "gem push workarea-classic_search_autocomplete-#{Workarea::ClassicSearchAutocomplete::VERSION}.gem --host #{host}"
   system "rm workarea-classic_search_autocomplete-#{Workarea::ClassicSearchAutocomplete::VERSION}.gem"
 end
